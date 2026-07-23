@@ -15,7 +15,7 @@ const scenes = [
   "정말 그렇게 쉽게 끝날 사이였을까?\n나는 그 정도밖에 안 되는 친구였을까?",
   "다시 누군가에게 기대면 또 버려질까 봐,\n나는 자꾸만 차가워졌다.",
   "그래도 버리지 못한 것들.\n낡은 책갈피, 첫눈 오는 날의 약속,\n그리고 아직도 선명한 너의 목소리.",
-  "하지만 12월 20일.\n졸업을 앞둔 겨울의 교실에서,\n네가 다시 내게 말을 걸었다.",
+  "하지만 12월 20일.\n마지막을 기다리는 겨울의 교실에서,\n너는 내게 말을 걸었온다.",
   "고개를 돌리면 예전처럼 흔들릴 것 같아,\n일부러 더 차갑게 말했다.\n\n“이제 와서 나한테 할 말이 있어?”",
   "밀어내는 말이었지만,\n사실 나는 아주 오래전부터 그 대답을 기다리고 있었다.",
   "네가 없는 빈자리에서 홀로 버텨야 했던 날들.\n아무렇지 않은 척 웃어 넘기려 해도, 매일 밤 소리 없이 무너져 내리던 시린 시간들.",
@@ -197,8 +197,8 @@ export default function App() {
             </div>
             
             {/* 메인 이미지 프레임 */}
-            <div className="absolute inset-0 z-0 flex items-start justify-center p-6 sm:p-12 pt-16 sm:pt-24 pb-48 sm:pb-56">
-              <picture className="w-full h-full max-w-6xl max-h-[60vh] flex items-center justify-center">
+            <div className="absolute inset-0 z-0 flex items-start justify-center p-6 sm:p-12 pt-16 sm:pt-8 pb-36 sm:pb-40">
+              <picture className="w-full h-full max-w-6xl max-h-[75vh] flex items-center justify-center">
                 <source media="(min-width: 768px)" srcSet={currentImages.pc} />
                 <img 
                   src={currentImages.mobile} 
@@ -236,7 +236,7 @@ export default function App() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 3, delay: 2.5, ease: "easeOut" }}
             >
-              <img src="https://pub-59a11d1a92c0405fa70a86806a5ade02.r2.dev/title.png" alt="Title" className="w-[180%] sm:w-[140%] md:w-[120%] lg:w-[100%] max-w-[1600px] h-auto drop-shadow-2xl" />
+              <img src="https://pub-59a11d1a92c0405fa70a86806a5ade02.r2.dev/title.png" alt="Title" className="w-[90%] sm:w-[140%] md:w-[120%] lg:w-[100%] max-w-[1600px] h-auto drop-shadow-2xl" />
             </motion.div>
 
             {/* 텍스트 가독성을 위한 하단 오버레이 */}
@@ -255,7 +255,7 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      <div className="absolute bottom-24 sm:bottom-32 w-full max-w-4xl px-6 sm:px-12 z-20 flex flex-col items-center justify-end min-h-[150px]">
+      <div className="absolute bottom-14 sm:bottom-20 w-full max-w-4xl px-6 sm:px-12 z-20 flex flex-col items-center justify-end min-h-[150px]">
         <AnimatePresence mode="wait">
           <motion.div
             key={current}
@@ -268,7 +268,7 @@ export default function App() {
             exit={{ opacity: 0, y: isInitial ? -15 : -10, filter: isInitial ? 'blur(8px)' : 'blur(4px)' }}
             transition={
               current === 17 
-                ? { duration: 5, times: [0, 0.2, 0.6, 1], ease: "easeInOut" } 
+                ? { duration: 8.5, times: [0, 0.1, 0.85, 1], ease: "easeInOut" } 
                 : { duration: isInitial ? 1.1 : 0.4, ease: [0.25, 0.1, 0.25, 1] }
             }
             className="text-center font-serif relative"
@@ -279,7 +279,7 @@ export default function App() {
             {scenes[current].split('\n').map((line, i) => (
               <p 
                 key={i} 
-                className={`text-zinc-50 leading-[2.2] ${line === '' ? 'h-6' : 'mb-4'} text-[17px] sm:text-lg md:text-xl font-light tracking-wide break-keep`}
+                className={`text-zinc-50 leading-[1.6] sm:leading-[1.7] ${line === '' ? 'h-3 sm:h-5' : 'mb-2 sm:mb-3'} text-[17px] sm:text-lg md:text-xl font-light tracking-wide break-keep`}
                 style={{ textShadow: '0 2px 24px rgba(0,0,0,1), 0 0 10px rgba(0,0,0,0.8)' }}
               >
                 {line}
