@@ -4,20 +4,20 @@ import { ChevronRight, ChevronLeft, Volume2, VolumeX } from 'lucide-react';
 
 const scenes = [
   "나는 어릴 때부터 혼자 있는 시간이 많았다.\n집에는 늘 식은 반찬과 짧은 메모뿐이었다.",
-  "그래서 문밖에 네가 서 있으면\n괜히 더 크게 웃었다.\n\n“또 왔어?”",
-  "우리는 특별한 일 없이도 매일을 함께했다.\n넌 내가 좋아하는 복숭아맛 사탕을 늘 말없이 건네주곤 했다.",
-  "나에게 넌 그냥 친구가 아니었다.\n누구보다 먼저 떠오르는 사람.\n어린날의 나는 몰랐지만 그건 사랑이었던 것 같다..",
-  "나의 봄은 영원할거라고 믿었다.\n항상 너는 내 곁에 있었으니까.\n너도 나에게 진심이라고 믿었으니까.",
-  "그런데 어느 날부터 네가 멀게 느껴졌다.\n눈을 피하고, 약속을 피하고, 결국 나는 버려졌다.",
+  "그래서 문밖에 네가 서 있으면\n괜스레 더 크게 웃었던 것 같다.\n“왔어?”",
+  "우리는 특별한 일 없이도 매일을 함께했다.\n그냥 같이 있는 순간이 행복했다.",
+  "나에게 넌 그냥 친구가 아니었다.\n슬플때나 기쁠때나 누구보다 먼저 떠오르는 사람.\n어쩌면 내 삶의 전부였을지도 모른다..",
+  "나의 봄은 영원할거라고 믿었다.\n항상 너는 내 곁에 있었으니까.",
+  "그런데 어느 날부터 네가 멀게 느껴졌다.\n눈을 피하고, 대화를 피하고, 결국 나는 버려졌다고 믿었다.",
   "“왜 나 피해?”\n목 끝까지 차오른 그 말은 결국 삼켜야만 했다.\n네가 '그냥'이라고 대답할까 봐 두려웠으니까.",
   "그래서 나는 먼저 멀어진 척했다.\n기다리지 않는 척, 상처받지 않은 척.",
   "고등학생이 되어서도 우리는 같은 공간에서,\n서로 모르는 사람처럼 스쳐 지나갔다.",
   "정말 그렇게 쉽게 끝날 사이였을까?\n나에게 넌 전부였는데..",
   "다시 누군가에게 기대면 또 버려질까 봐,\n나를 그 겨울에 가두고 말았다.",
   "그래도 버리지 못한 것들.\n낡은 책갈피, 첫눈 오는 날의 약속,\n그리고 아직도 선명한 너의 목소리.",
-  "소중히 간직하던 그날의 모습이 잊혀질때 쯤.\n마지막을 기다리는 겨울의 교실에서,\n너는 내게 말을 걸어온다.",
+  "소중히 간직하던 그날의 모습이 잊혀질때 쯤.\n이별을 기다리는 겨울의 교실에서,\n너는 내게 말을 걸어온다.",
   "고개를 돌리면 예전처럼 흔들릴 것 같아,\n일부러 더 차갑게 말했다.\n“이제 와서 나한테 할 말이 있어?”",
-  "쏀척을 해보았지만,\n사실 나는 아주 오래전부터 너의 부름을 기다리고 있었다.",
+  "쏀척을 해보았지만,\n사실 나는 항상 너의 손길만을 기다리고 있었다.",
   "네가 없는 빈자리에서 홀로 버텨야 했던 날들.\n아무렇지 않은 척 웃어 넘기려 해도, 매일 밤 소리 없이 무너져 내리던 시린 시간들.",
   "다시는 누군가에게 기대지 않겠다 다짐하면서도,\n결국엔 매번 네가 돌아오기만을 간절히 바랐던 길고 외로웠던 나의 겨울.",
   "그 모든 아픔을 따뜻하게 녹여내듯,\n마침내 우리의 두 번째 계절이 시작되려 한다."
@@ -197,7 +197,7 @@ export default function App() {
             </div>
             
             {/* 메인 이미지 프레임 */}
-            <div className="absolute inset-0 z-0 flex items-start justify-center p-6 sm:p-12 pt-16 sm:pt-8 pb-36 sm:pb-40">
+            <div className="absolute inset-0 z-0 flex items-start justify-center p-6 sm:p-12 pt-6 sm:pt-8 pb-28 sm:pb-40">
               <picture className="w-full h-full max-w-6xl max-h-[75vh] flex items-center justify-center">
                 <source media="(min-width: 768px)" srcSet={currentImages.pc} />
                 <img 
@@ -255,7 +255,7 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      <div className="absolute bottom-14 sm:bottom-20 w-full max-w-4xl px-6 sm:px-12 z-20 flex flex-col items-center justify-end min-h-[150px]">
+      <div className="absolute bottom-22 sm:bottom-20 w-full max-w-4xl px-6 sm:px-12 z-20 flex flex-col items-center justify-end min-h-[150px]">
         <AnimatePresence mode="wait">
           <motion.div
             key={current}
